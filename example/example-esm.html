@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ESM DatetimePicker Example</title>
+</head>
+<body>
+
+<h1>ESM DatetimePicker Example</h1>
+
+<div id="picker-container"></div>
+
+<p>
+    <button id="checkValueBtn">Check Form Value</button>
+</p>
+
+<script type="module">
+    import { DatetimePicker } from '../dist/datetimepicker.esm.js';
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const picker = new DatetimePicker({
+            parent: "#picker-container",
+            label: "Pick a date/time:",
+            use12Hour: false,
+            format: "DD.MM.YYYY HH:mm",
+            placeholder: "--.--.---- --:--",
+        });
+
+        const checkBtn = document.getElementById("checkValueBtn");
+        checkBtn.addEventListener("click", () => {
+            const inputVal = picker.input.value;
+            const date = new Date(Date.UTC(inputVal));
+            console.log("picker object: ", picker);
+            console.log("inputVal: ", inputVal);
+            console.log("date: ", date);
+        });
+    });
+</script>
+
+</body>
+</html>

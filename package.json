@@ -1,0 +1,33 @@
+{
+  "name": "datetime-picker",
+  "version": "1.0.0",
+  "description": "DatetimePicker",
+  "main": "dist/datetimepicker.js",
+  "module": "dist/datetimepicker.module.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "datetime",
+    "picker",
+    "calendar",
+    "pure-js"
+  ],
+  "author": "tinesime",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.6",
+    "rollup": "^4.32.1",
+    "rollup-plugin-postcss": "^4.0.2"
+  }
+}

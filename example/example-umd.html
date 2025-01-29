@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DatetimePicker UMD Example</title>
+</head>
+<body>
+
+<h1>UMD Example</h1>
+<div id="demo-umd"></div>
+
+<script src="../dist/datetimepicker.js"></script>
+<script>
+  const { DatetimePicker } = window.DatetimePicker;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const picker = new DatetimePicker({
+      parent: "#demo-umd",
+      label: "Pick a datetime:",
+      use12Hour: true,
+      format: "DD.MM.YYYY HH:mm",
+      placeholder: "--.--.---- --:--"
+    });
+  });
+</script>
+
+</body>
+</html>

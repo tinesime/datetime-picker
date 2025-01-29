@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DatetimePicker IIFE Example</title>
+
+    <link rel="stylesheet" href="../dist/datetimepicker.min.css">
+</head>
+<body>
+
+<h1>IIFE Example</h1>
+<div id="demo-iife"></div>
+
+<script src="../dist/datetimepicker.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const picker = new DatetimePicker({
+            parent: "#demo-iife",
+            label: "Pick a date/time (IIFE):",
+            use12Hour: true,
+            format: "DD.MM.YYYY HH:mm",
+            placeholder: "--.--.---- --:--"
+        });
+    });
+</script>
+
+</body>
+</html>
